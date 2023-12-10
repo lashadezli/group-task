@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from '../modules/App.module.scss';
+import classes from './modules/App.module.scss';
 
 const App = () => {
   const [currentInput, setCurrentInput] = useState('');
@@ -37,9 +37,9 @@ const App = () => {
     <>
       <div className={`${classes['main-calculator']} ${classes[theme]}`} id="calculator">
         <div className={classes['theme-buttons']}>
-          <button onClick={() => changeTheme('default')} className={classes['theme-button-blue']}></button>
-          <button onClick={() => changeTheme('second')} className={classes['theme-button-gray']}></button>
-          <button onClick={() => changeTheme('third')} className={classes['theme-button-purple']}></button>
+          <button onClick={() => changeTheme('default')} className={classes['first-theme-button']}></button>
+          <button onClick={() => changeTheme('second')} className={classes['second-theme-button']}></button>
+          <button onClick={() => changeTheme('third')} className={classes['third-theme-button']}></button>
         </div>
             <input type="text" value={currentInput || '0'} className={classes['number-input']} readOnly />
                 <br />
