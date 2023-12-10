@@ -1,96 +1,129 @@
 .main-calculator {
     
-    input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-  
-    button {
-      width: 50px;
-      height: 50px;
-      margin: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      border-radius: 5px;
-    }
-  
-    &.default {
-      background-color: white;
-      
-    .number-input
-    {
-        background-color: white;
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  &.default {
+    background-color: rgb(26, 26, 50);
+    border-radius: 30px;
+    margin-left: 150px;
+    height: 450px;
+
+  .number-input
+  {
+      color: rgb(228, 228, 228);
+      background-color: rgb(19, 19, 64);
+      height: 70px;
+      margin-left: 10px;
+      width: 260px;
+      border-radius: 40px;
+      margin-top: 10px;
+  }
+
+    .first-theme-button {
+      background-color: blue;
     }
 
-      .theme-button-blue {
-        background-color: blue;
-      }
-  
-      .reset-delete-button,
-      .operator-button,
-      .number-button {
-        background-color: yellow;
-        color: white;
-      }
-  
-      .equals-button {
-        background-color: red;
-        color: white;
-      }
+    .reset-delete-button,
+    .operator-button,
+    .number-button {
+      background-color: rgb(228, 228, 228);
+      color: black;
     }
-  
-    &.second {
-      background-color: gray;
 
-      .number-input
-      {
-        background-color: aqua;
-      }
-  
-      .theme-button-gray {
-        background-color: gray;
-      }
-  
-      .reset-delete-button,
-      .operator-button,
-      .number-button {
-        background-color: blue;
-        color: white;
-      }
-  
-      .equals-button {
-        background-color: orange;
-        color: white;
-      }
+    .equals-button {
+      background-color: red;
+      color: white;
     }
-  
-    &.third {
-      background-color: purple;
-
-      .number-input
-      {
-        background-color: firebrick;
-      }
-  
-      .theme-button-purple {
-        background-color: purple;
-      }
-  
-      .reset-delete-button,
-      .operator-button,
-      .number-button {
-        background-color: pink;
-        color: white;
-      }
-  
-      .equals-button {
-        background-color: cyan;
-        color: white;
-      }
+    .equals-button:hover {
+      background-color: rgb(211, 95, 95);
+      color: white;
     }
   }
-  
+
+  &.second {
+    background-color: rgb(149, 149, 151);
+    border-radius: 30px;
+    margin-left: 150px;
+    height: 450px;
+
+    .number-input
+    {
+      color: rgb(0, 0, 0);
+      background-color: rgb(237, 237, 237);
+      height: 70px;
+      margin-left: 10px;
+      width: 260px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    .second-theme-button {
+      background-color: orange;
+
+    }
+
+    .reset-delete-button{
+      background-color: cyan;
+    }
+    .operator-button,
+    .number-button {
+      background-color: rgb(233, 220, 220);
+      color: black;
+    }
+
+    .equals-button {
+      background-color: orange;
+      color: white;
+    }
+  }
+
+  &.third {
+    background-color: rgb(68, 3, 68);
+    border-radius: 30px;
+    margin-left: 150px;
+    height: 450px;
+
+    .number-input
+    {
+      background-color: rgb(97, 15, 97);
+      color: rgb(255, 185, 55);
+      height: 70px;
+      margin-left: 10px;
+      width: 260px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    .third-theme-button {
+      background-color: cyan;
+    }
+
+    .reset-delete-button,
+    .operator-button,
+    .number-button {
+      background-color: rgb(68, 3, 68);
+      color: orange;
+    }
+
+    .equals-button {
+      background-color: cyan;
+      color: white;
+    }
+  }
+}
