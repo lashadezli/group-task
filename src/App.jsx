@@ -50,7 +50,7 @@ const App = () => {
    return (
     <>
      <div className={classes['main-calculator']} id="calculator">
-       <divclassName='calculator'>
+       <div className='calculator'>
        <div className='toggle'>
         <p>calc</p>
         <div>toggle</div>
