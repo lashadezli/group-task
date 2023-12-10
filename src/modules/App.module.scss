@@ -1,53 +1,96 @@
-.main-box{
-  width: 300px;
-  height: 70px;
-  border-radius: 30px;
-  background-color: grey;
-  display: flex;
-}
-.first-button{
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin: 10px;
-}
-.second-button{
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background-color: orange;
-  margin: 10px;
-}
-.third-button{
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background-color: cyan;
-  margin: 10px;
-}
-.first-mode{
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-}
-.second-mode{
-  width: 100vw;
-  height: 100vh;
-  background-color: orange;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-}
-.third-mode{
-  width: 100vw;
-  height: 100vh;
-  background-color: cyan;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-}
+.main-calculator {
+    
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+  
+    &.default {
+      background-color: white;
+      
+    .number-input
+    {
+        background-color: white;
+    }
+
+      .theme-button-blue {
+        background-color: blue;
+      }
+  
+      .reset-delete-button,
+      .operator-button,
+      .number-button {
+        background-color: yellow;
+        color: white;
+      }
+  
+      .equals-button {
+        background-color: red;
+        color: white;
+      }
+    }
+  
+    &.second {
+      background-color: gray;
+
+      .number-input
+      {
+        background-color: aqua;
+      }
+  
+      .theme-button-gray {
+        background-color: gray;
+      }
+  
+      .reset-delete-button,
+      .operator-button,
+      .number-button {
+        background-color: blue;
+        color: white;
+      }
+  
+      .equals-button {
+        background-color: orange;
+        color: white;
+      }
+    }
+  
+    &.third {
+      background-color: purple;
+
+      .number-input
+      {
+        background-color: firebrick;
+      }
+  
+      .theme-button-purple {
+        background-color: purple;
+      }
+  
+      .reset-delete-button,
+      .operator-button,
+      .number-button {
+        background-color: pink;
+        color: white;
+      }
+  
+      .equals-button {
+        background-color: cyan;
+        color: white;
+      }
+    }
+  }
+  
