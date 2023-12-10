@@ -1,16 +1,19 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Kanit&family=League+Spartan&family=Lora&family=Overpass&family=Space+Mono&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+//theme 1
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  font-size: 32px;
+  font-family: 'League Spartan', sans-serif;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 400px;
+  min-height: 100vh;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-weight: 700;
+  background-color: hsl(222, 26%, 31%);
 }
 
 a {
@@ -22,17 +25,44 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-around;
+  color: hsl(0, 0%, 100%);
+}
+
+
+input {
+  width: 95%;
+  height: 80px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: hsl(224, 36%, 15%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  text-align: end;
+  font-size: 32px;
+}
+.container {
+  gap: 5px;
+  margin-left: 20px;
+  width: 500px;
+  height: 500px;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 10px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 button {
@@ -40,19 +70,56 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 700;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 5px hsl(220, 4%, 57%);
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 20px;
+  color: hsl(221, 14%, 31%);
+  width: 22%;
 }
+
+.calculate-btn {
+  background-color: hsl(6, 63%, 50%);
+  width: 45%;
+  margin-left: 5px;
+  box-shadow: 0px 5px  hsl(6, 70%, 34%);
+}
+
+.calculate-btn:hover {
+  background-color: hsl(6, 84%, 65%);
+}
+
+.reset {
+  width: 45%;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 5px  hsl(224, 28%, 35%);
+  margin-left: 2px;
+}
+
+.delete {
+  background-color: hsl(226, 16%, 47%);
+  box-shadow: 0px 5px  hsl(224, 28%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.delete:hover {
+  background-color: hsl(225, 16%, 62%);
+  box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
+
+.reset:hover {
+  background-color: hsl(225, 16%, 62%);
+  box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
+
 button:hover {
-  border-color: #646cff;
+  background-color: hsl(0, 0%, 100%);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
