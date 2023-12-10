@@ -50,28 +50,46 @@ const App = () => {
    return (
     <>
      <div className={classes['main-calculator']} id="calculator">
-       <input type="text" value={currentInput || '0'} readOnly />
-       <br />
-       <button onClick={() => appendNumber('7')}>7</button>
-       <button onClick={() => appendNumber('8')}>8</button>
-       <button onClick={() => appendNumber('9')}>9</button>
-       <button onClick={() => setOperatorHandler('+')}>+</button>
-       <br />
-       <button onClick={() => appendNumber('4')}>4</button>
-       <button onClick={() => appendNumber('5')}>5</button>
-       <button onClick={() => appendNumber('6')}>6</button>
-       <button onClick={() => setOperatorHandler('-')}>-</button>
-       <br />
-       <button onClick={() => appendNumber('1')}>1</button>
-       <button onClick={() => appendNumber('2')}>2</button>
-       <button onClick={() => appendNumber('3')}>3</button>
-       <button onClick={() => setOperatorHandler('*')}>*</button>
-       <br />
-       <button onClick={() => appendNumber('0')}>0</button>
-       <button onClick={() => setOperatorHandler('/')}>/</button>
-       <button onClick={calculate}>=</button>
-       <button onClick={clearDisplay}>C</button>
-       <button onClick={deleteLast}>DEL</button>
+       <divclassName='calculator'>
+       <div className='toggle'>
+        <p>calc</p>
+        <div>toggle</div>
+       </div>
+       <div className='keypad'>
+        <input type="text" value={currentInput || '0'} readOnly />
+       </div>
+       <div className='container'>
+        <div className='btn-container'>
+         <button onClick={() => appendNumber('7')}>7</button>
+         <button onClick={() => appendNumber('8')}>8</button>
+         <button onClick={() => appendNumber('9')}>9</button>
+         <button className='delete' onClick={deleteLast}>DEL</button>
+        </div>
+        <div className='btn-container'>
+         <button onClick={() => appendNumber('4')}>4</button>
+         <button onClick={() => appendNumber('5')}>5</button>
+         <button onClick={() => appendNumber('6')}>6</button>
+         <button onClick={() => setOperatorHandler('+')}>+</button>
+        </div>
+        <div className='btn-container'>
+         <button onClick={() => appendNumber('1')}>1</button>
+         <button onClick={() => appendNumber('2')}>2</button>
+         <button onClick={() => appendNumber('3')}>3</button>
+         <button onClick={() => setOperatorHandler('-')}>-</button>
+        </div>
+        <div className='btn-container'>
+         <button onClick={() => appendNumber('.')}>.</button>
+         <button onClick={() => appendNumber('0')}>0</button>
+         <button onClick={() => setOperatorHandler('/')}>/</button>
+         <button onClick={() => setOperatorHandler('*')}>x</button>
+        </div>
+        <div className='btn-container'>
+         <button className='reset' onClick={clearDisplay}>RESET</button>
+         <button className='calculate-btn' onClick={calculate}>=</button>
+        </div>
+       </div>
+       
+     </div>
        <div className={`${classes['first-mode']} ${firstColor === true && classes['first-mode']} ${secondColor === true && classes['second-mode']} ${thirdColor === true && classes['third-mode']}`}>
       <h2 className={classes['head-line']}>THEME</h2>
       <div className={classes['main-box']}>
