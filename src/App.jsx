@@ -1,94 +1,61 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 
-function Calculator() {
-  const [currentInput, setCurrentInput] = useState('');
-  const [operator, setOperator] = useState('');
-  const [storedValue, setStoredValue] = useState('');
+ const Calculator = () => {
+   const [currentInput, setCurrentInput] = useState('');
 
-  const appendNumber = (number) => {
+   const appendNumber = (number) => {
+     setCurrentInput(currentInput + number);
+   };
 
-    if (['+','-','*', '/'].includes(number)) 
-    {
-       setOperatorHandler(number);
-    } else
-    {
-      setCurrentInput(currentInput + number);
-    }
-  };
+   const setOperatorHandler = (operator) => {
+     setCurrentInput(currentInput + operator);
+   };
 
-  const setOperatorHandler = (op) => {
-    if (operator === '') {
-    setStoredValue(currentInput);
-    setOperator(op);
-    setCurrentInput('');
-    } else{
-      calculate();
-      setOperator();
-    }
-  };
+   const calculate = () => {
+     try {
+       setCurrentInput(eval(currentInput).toString());
+     } catch (error) {
+       setCurrentInput('Error');
+     }
+   };
 
-  const calculate = () => {
-    let result;
-    switch (operator) {
-      case '+':
-        result = parseFloat(storedValue) + parseFloat(currentInput);
-        break;
-      case '-':
-        result = parseFloat(storedValue) - parseFloat(currentInput);
-        break;
-      case '*':
-        result = parseFloat(storedValue) * parseFloat(currentInput);
-        break;
-      case '/':
-        result = parseFloat(storedValue) / parseFloat(currentInput);
-        break;
-      default:
-        return;
-    }
-    setCurrentInput(result.toString());
-    setOperator('');
-    setStoredValue('');
-  };
+   const clearDisplay = () => {
+     setCurrentInput('');
+   };
 
-  const clearDisplay = () => {
-    setCurrentInput('');
-    setOperator('');
-    setStoredValue('');
-  };
+   const deleteLast = () => {
+     setCurrentInput(currentInput.slice(0, -1));
+   };
 
-  const deleteLast = () => {
-    setCurrentInput(currentInput.slice(0, -1));
-  };
+   return (
+     <div id="calculator">
+       <input type="text" value={currentInput || '0'} readOnly />
+       <br />
+       <button onClick={() => appendNumber('7')}>7</button>
+       <button onClick={() => appendNumber('8')}>8</button>
+       <button onClick={() => appendNumber('9')}>9</button>
+       <button onClick={() => setOperatorHandler('+')}>+</button>
+       <br />
+       <button onClick={() => appendNumber('4')}>4</button>
+       <button onClick={() => appendNumber('5')}>5</button>
+       <button onClick={() => appendNumber('6')}>6</button>
+       <button onClick={() => setOperatorHandler('-')}>-</button>
+       <br />
+       <button onClick={() => appendNumber('1')}>1</button>
+       <button onClick={() => appendNumber('2')}>2</button>
+       <button onClick={() => appendNumber('3')}>3</button>
+       <button onClick={() => setOperatorHandler('*')}>*</button>
+       <br />
+       <button onClick={() => appendNumber('0')}>0</button>
+       <button onClick={() => setOperatorHandler('/')}>/</button>
+       <button onClick={calculate}>=</button>
+       <button onClick={clearDisplay}>C</button>
+       <button onClick={deleteLast}>DEL</button>
+     </div>
+   );
+ };
 
-  return (
-    <div id="calculator">
-      <input type="text" value={currentInput || '0'} readOnly />
-      <br />
-      {[7, 8, 9, '+'].map((number) => (
-        <button key={number} onClick={() => appendNumber(number)}>
-          {number}
-        </button>
-      ))}
-      <br />
-      {[4, 5, 6, '-'].map((number) => (
-        <button key={number} onClick={() => appendNumber(number)}>
-          {number}
-        </button>
-      ))}
-      <br />
-      {[1, 2, 3, '*'].map((number) => (
-        <button key={number} onClick={() => appendNumber(number)}>
-          {number}
-        </button>
-      ))}
-      <br />
-      {[0, '/', '=', 'C', 'DEL'].map((item) => (
-        <button key={item} onClick={() => (item === '=' ? calculate() : item === 'C' ? clearDisplay() : item === 'DEL' ? deleteLast() : setOperatorHandler(item))}>
-          {item}
-        </button>
-      ))}
-    </div>
-  );
-}
+ export default Calculator;
 
-export default Calculator;
+
+
