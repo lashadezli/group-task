@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from '../modules/App.module.scss';
 
-// Define a functional component named App
+
 const App = () => {
   // State hook to manage the current input in the calculator
   const [currentInput, setCurrentInput] = useState('');
@@ -25,7 +25,7 @@ const App = () => {
 
   // Function to append a number to the current input
   const appendNumber = (number) => {
-    // Ensure only one decimal point in a number
+    // Ensure only one decimal point in a number (atobiti ricxvi)
     if (number === '.' && currentInput.includes('.')) {
       return;
     }
@@ -34,7 +34,7 @@ const App = () => {
 
 
   const setOperatorHandler = (operator) => {
-    // If the input is not empty and does not end with an operator, append the operator
+    // If the input is not empty and does not end with an operator, append the operator (operatori ar iwereba inputshi)
     if (currentInput !== '' && !/[+\-*/]$/.test(currentInput)) {
       setCurrentInput((prevInput) => prevInput + operator);
     }
@@ -54,6 +54,14 @@ const App = () => {
         //whitespace characters from the beginning and end of a string. 
         //The whitespace characters include spaces, tabs, and newline characters.
         setCurrentInput(eval(currentInput).toString());
+
+
+        //The Javascript eval() function is used to evaluate the expression. If the argument represents
+        // one or more JavaScript statements, eval() evaluates the statements. We do not call eval() to evaluate 
+       // an arithmetic expression. JavaScript evaluates arithmetic expressions automatically.
+
+       //(ჩვენ არ მოვუწოდებთ eval()-ს შესაფასებლად
+        // არითმეტიკული expression. JavaScript ავტომატურად აფასებს არითმეტიკულ expressions.)
       }
     } catch (error) {
       setCurrentInput('Error');
@@ -68,7 +76,9 @@ const App = () => {
 
   // Function to delete the last character in the current input
   const deleteLast = () => {
-    setCurrentInput(currentInput.slice(0, -1));   //Description. The slice() method returns selected elements in an array, as a new array. The slice() method selects from a given start, up to a (not inclusive) given end. The slice() method does not change the original array.
+    setCurrentInput(currentInput.slice(0, -1));   //Description. The slice() method returns selected elements in an
+    // array, as a new array. The slice() method selects from a given start,
+    // up to a (not inclusive) given end. The slice() method does not change the original array.
   };
 
 
