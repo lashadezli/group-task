@@ -117,15 +117,25 @@ body
     align-items: center;
   }
 
+
+   .number-label
+
+  {
+    margin-left: 7px;
+    color: white;
+  }
+
    
   .first-theme-button
   {
    background-color: hsl(25, 98%, 40%);
+   margin-bottom: 30px;
   }
    
    .second-theme-button,
    .third-theme-button {
      background-color:hsl(0, 5%, 81%) ;
+     margin-bottom: 30px;
    }
 
    .first-theme-button,
@@ -146,6 +156,7 @@ body
       color: black;
       background-color: white;
       height: 70px;
+      font-size: 40px;
       width: 93%;
       border-radius: 10px;
       border-color: white;
@@ -193,6 +204,7 @@ body
    .Title
    {
     font-size: 30px;
+    color: white;
    }
 
    .Numbers
@@ -226,6 +238,7 @@ body
    {
     font-size: 10px;
     margin-right: 10px;
+    color: white;
    }
 
   .Press
@@ -237,16 +250,25 @@ body
     width: 78px;
     align-items: center;
   }
+  
+  .number-label
+
+  {
+    margin-left: 7px;
+    color: black;
+  }
 
    
   .second-theme-button
   {
    background-color: hsl(6, 63%, 50%);
+   margin-bottom: 30px;
   }
    
    .first-theme-button,
    .third-theme-button {
      background-color:hsl(0, 5%, 81%) ;
+     margin-bottom: 30px;
    }
 
    .first-theme-button,
@@ -266,9 +288,10 @@ body
   {
       color: white;
       background-color: hsl(224, 36%, 15%);
+      font-size: 40px;
       height: 70px;
       width: 93%;
-      border-radius: 20px;
+      border-radius: 10px;
       border-color: white;
       margin-top: 10px;
   }
@@ -315,6 +338,8 @@ body
    .Title
    {
     font-size: 30px;
+    color:rgb(255, 185, 55) ;
+
    }
 
    .Numbers
@@ -348,6 +373,8 @@ body
    {
     font-size: 10px;
     margin-right: 10px;
+    color:rgb(255, 185, 55) ;
+
    }
 
   .Press
@@ -360,15 +387,24 @@ body
     align-items: center;
   }
 
+  .number-label
+
+  {
+    margin-left: 7px;
+    color:rgb(255, 185, 55) ;
+  }
+
    
   .third-theme-button
   {
    background-color: hsl(176, 100%, 44%);
+   margin-bottom: 30px;
   }
    
    .first-theme-button,
    .second-theme-button {
     background-color: hsl(0, 5%, 81%);
+    margin-bottom: 30px;
    }
 
    .first-theme-button,
@@ -398,7 +434,7 @@ body
 
   .Calculate-numbers
   {
-     background-color: hsl(268, 75%, 9%);
+     background-color: hsl(268, 71%, 12%);
   }
 
 
