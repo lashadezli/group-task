@@ -9,10 +9,19 @@ const App = () => {
   // State hook to manage the theme of the calculator
   const [theme, setTheme] = useState('default');
 
-  // Function to change the theme based on the button pressed
+  // // Function to change the theme based on the button pressed
   const changeTheme = (newTheme) => {
-    setTheme(newTheme); // Update the theme state
+    setTheme(newTheme);
+    if (newTheme === 'default') {
+      document.body.style.backgroundColor = 'hsl(0, 0%, 90%)';
+    } else if (newTheme === 'second') {
+      document.body.style.backgroundColor = 'hsl(222, 26%, 31%)';
+    } else if (newTheme === 'third') {
+      document.body.style.backgroundColor = 'hsl(268, 75%, 9%)';
+    }
   };
+
+
 
   // Function to append a number to the current input
   const appendNumber = (number) => {
@@ -72,10 +81,19 @@ const App = () => {
            <div className={classes['main-buttons']}>
                <p className={classes['theme']}>THEME</p>
                 <div className={classes['Press']}>
-                  <button onClick={() => changeTheme('default')} className={classes['first-theme-button']}></button>
-                  <button onClick={() => changeTheme('second')} className={classes['second-theme-button']}></button>
-                  <button onClick={() => changeTheme('third')} className={classes['third-theme-button']}></button>
-                </div>
+              <div className={classes['button-container']}>
+                <div className={classes['number-label']}>1</div>
+                <button onClick={() => changeTheme('default')} className={classes['first-theme-button']}></button>
+              </div>
+              <div className={classes['button-container']}>
+                <div className={classes['number-label']}>2</div>
+                <button onClick={() => changeTheme('second')} className={classes['second-theme-button']}></button>
+              </div>
+              <div className={classes['button-container']}>
+                <div className={classes['number-label']}>3</div>
+                <button onClick={() => changeTheme('third')} className={classes['third-theme-button']}></button>
+              </div>
+            </div>
           </div>
         </div>
             <input type="text" value={currentInput || '0'} className={classes['number-input']} readOnly />
