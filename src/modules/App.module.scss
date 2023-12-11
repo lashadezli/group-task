@@ -1,16 +1,38 @@
-.main-calculator {
-    
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+body
+{
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.main-calculator
+{ 
+
+  max-width: 380px;
+      
+
+   .Calculate-numbers
+   {
+    padding: 20px 20px;
+    background-color: gray ;
+    border-radius: 8px;
+   }
+
   input {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 30px;
     margin-bottom: 10px;
+    text-align: end;
   }
 
   button {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+    width: 70px;
+    height: 40px;
+    margin: 7px;
     font-size: 16px;
     cursor: pointer;
     border: none;
@@ -18,112 +40,390 @@
     border-radius: 5px;
   }
 
+  .extraxted {
+     display: flex;
+     flex-direction: row;
+     gap: 20px;
+  
+    button.reset-button,
+    button.equals-button {
+      width: 150px; 
+      margin-top: 10px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+
+    }
+    
+     button.reset-button{
+        margin-left: 8px;
+     }
+
+  }
+  
+
+  // 1111
+  
+
   &.default {
-    background-color: rgb(26, 26, 50);
     border-radius: 30px;
-    margin-left: 150px;
-    height: 450px;
+    margin-left: 600px;
+
+   .Title
+   {
+    font-size: 30px;
+   }
+
+   .Numbers
+   {
+     margin-left: 340px;
+     letter-spacing: 3px;
+     font-size: 10px;
+     color: black;
+     margin-bottom: 0;
+     margin-top: 0;
+   }
+
+    .theme-buttons
+    {
+     display: flex;
+     align-items: center;
+     border-radius: 20px;
+     gap: 100px;
+    }
+
+
+   .main-buttons
+   {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-left: 90px;
+    gap: 3px;
+   }
+   .theme
+   {
+    font-size: 10px;
+    margin-right: 10px;
+   }
+
+  .Press
+  {
+    background-color: hsl(0, 5%, 81%);
+    display: flex;
+    border-radius: 18px;
+    height: 20px;
+    width: 78px;
+    align-items: center;
+  }
+
+   
+  .first-theme-button
+  {
+   background-color: hsl(25, 98%, 40%);
+  }
+   
+   .second-theme-button,
+   .third-theme-button {
+     background-color:hsl(0, 5%, 81%) ;
+   }
+
+   .first-theme-button,
+   .second-theme-button,
+   .third-theme-button
+   {
+      height: 13px;
+      width: 13px;
+      border-radius: 20px;
+      margin-left: 5px;
+      padding: 0;
+   }
+
+
 
   .number-input
   {
-      color: rgb(228, 228, 228);
-      background-color: rgb(19, 19, 64);
+      color: black;
+      background-color: white;
       height: 70px;
-      margin-left: 10px;
-      width: 260px;
-      border-radius: 40px;
+      width: 93%;
+      border-radius: 10px;
+      border-color: white;
       margin-top: 10px;
   }
 
-    .first-theme-button {
-      background-color: blue;
-    }
-
-    .reset-delete-button,
-    .operator-button,
-    .number-button {
-      background-color: rgb(228, 228, 228);
-      color: black;
-    }
-
-    .equals-button {
-      background-color: red;
-      color: white;
-    }
-    .equals-button:hover {
-      background-color: rgb(211, 95, 95);
-      color: white;
-    }
+  .Calculate-numbers
+  {
+    background-color: hsl(0, 5%, 81%);
   }
 
-  &.second {
-    background-color: rgb(149, 149, 151);
-    border-radius: 30px;
-    margin-left: 150px;
-    height: 450px;
 
-    .number-input
+    .reset-delete-button,.reset-button
     {
-      color: rgb(0, 0, 0);
-      background-color: rgb(237, 237, 237);
-      height: 70px;
-      margin-left: 10px;
-      width: 260px;
-      border-radius: 40px;
-      margin-top: 10px;
+      background-color: hsl(176, 100%, 44%);
+      box-shadow: 0px 4px 0px 0px  hsl(185, 58%, 25%);
+      
     }
 
-    .second-theme-button {
-      background-color: orange;
-
-    }
-
-    .reset-delete-button{
-      background-color: cyan;
-    }
-    .operator-button,
-    .number-button {
-      background-color: rgb(233, 220, 220);
-      color: black;
-    }
+     .operator-button,
+     .number-button {
+       background-color: rgb(228, 228, 228);
+       color: black;
+       box-shadow: 0px 4px 0px 0px  hsl(35, 11%, 61%);
+     }
 
     .equals-button {
-      background-color: orange;
+      background-color: hsl(25, 98%, 40%);
       color: white;
+      box-shadow: 0px 4px 0px 0px hsl(25, 99%, 27%);
     }
   }
+
+
+
+// end of 1
+
+
+
+
+  &.second {  
+    border-radius: 30px;
+    margin-left: 600px;
+
+   .Title
+   {
+    font-size: 30px;
+   }
+
+   .Numbers
+   {
+     margin-left: 340px;
+     letter-spacing: 3px;
+     font-size: 10px;
+     color: black;
+     margin-bottom: 0;
+     margin-top: 0;
+   }
+
+    .theme-buttons
+    {
+     display: flex;
+     align-items: center;
+     border-radius: 20px;
+     gap: 100px;
+    }
+
+
+   .main-buttons
+   {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-left: 90px;
+    gap: 3px;
+   }
+   .theme
+   {
+    font-size: 10px;
+    margin-right: 10px;
+   }
+
+  .Press
+  {
+    display: flex;
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 18px;
+    height: 20px;
+    width: 78px;
+    align-items: center;
+  }
+
+   
+  .second-theme-button
+  {
+   background-color: hsl(6, 63%, 50%);
+  }
+   
+   .first-theme-button,
+   .third-theme-button {
+     background-color:hsl(0, 5%, 81%) ;
+   }
+
+   .first-theme-button,
+   .second-theme-button,
+   .third-theme-button
+   {
+      height: 13px;
+      width: 13px;
+      border-radius: 20px;
+      margin-left: 5px;
+      padding: 0;
+   }
+
+
+
+  .number-input
+  {
+      color: white;
+      background-color: hsl(224, 36%, 15%);
+      height: 70px;
+      width: 93%;
+      border-radius: 20px;
+      border-color: white;
+      margin-top: 10px;
+  }
+
+  .Calculate-numbers
+  {
+      background-color: hsl(223, 31%, 20%);
+
+  }
+
+
+    .reset-delete-button,.reset-button
+    {
+      background-color: hsl(225, 21%, 49%);
+      color: white;
+      box-shadow: 0px 4px 0px 0px hsl(224, 28%, 35%);
+    }
+
+     .operator-button,
+     .number-button {
+       background-color: rgb(228, 228, 228);
+       color: black;
+       box-shadow: 0px 4px 0px 0px  hsl(28, 16%, 65%);
+     }
+
+    .equals-button {
+      background-color:  hsl(6, 63%, 50%);
+      color: white;
+      box-shadow: 0px 4px 0px 0px hsl(6, 70%, 34%);
+    }
+  }
+
+
+
+// end of 2
+
+
+
 
   &.third {
-    background-color: rgb(68, 3, 68);
     border-radius: 30px;
-    margin-left: 150px;
-    height: 450px;
+    margin-left: 600px;
 
-    .number-input
+   .Title
+   {
+    font-size: 30px;
+   }
+
+   .Numbers
+   {
+     margin-left: 340px;
+     letter-spacing: 3px;
+     font-size: 10px;
+     color: black;
+     margin-bottom: 0;
+     margin-top: 0;
+   }
+
+    .theme-buttons
     {
-      background-color: rgb(97, 15, 97);
+     display: flex;
+     align-items: center;
+     border-radius: 20px;
+     gap: 100px;
+    }
+
+
+   .main-buttons
+   {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-left: 90px;
+    gap: 3px;
+   }
+   .theme
+   {
+    font-size: 10px;
+    margin-right: 10px;
+   }
+
+  .Press
+  {
+    display: flex;
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 18px;
+    height: 20px;
+    width: 78px;
+    align-items: center;
+  }
+
+   
+  .third-theme-button
+  {
+   background-color: hsl(176, 100%, 44%);
+  }
+   
+   .first-theme-button,
+   .second-theme-button {
+    background-color: hsl(0, 5%, 81%);
+   }
+
+   .first-theme-button,
+   .second-theme-button,
+   .third-theme-button
+   {
+      height: 13px;
+      width: 13px;
+      border-radius: 20px;
+      margin-left: 5px;
+      padding: 0;
+   }
+
+
+  
+  .number-input
+  {
+      background-color: hsl(268, 71%, 12%);
+      font-size: 40px;
       color: rgb(255, 185, 55);
       height: 70px;
-      margin-left: 10px;
-      width: 260px;
-      border-radius: 40px;
+      width: 93%;
+      border-radius: 10px;
+      border-color: white;
       margin-top: 10px;
+  }
+
+  .Calculate-numbers
+  {
+     background-color: hsl(268, 75%, 9%);
+  }
+
+
+    .reset-delete-button,.reset-button
+    {
+      background-color: hsl(281, 89%, 26%);
+      box-shadow: 0 4px 0px 0px hsl(285, 91%, 52%)
     }
 
-    .third-theme-button {
-      background-color: cyan;
-    }
-
-    .reset-delete-button,
-    .operator-button,
-    .number-button {
-      background-color: rgb(68, 3, 68);
-      color: orange;
-    }
+     .operator-button,
+     .number-button {
+       background-color: hsl(268, 47%, 21%);
+       color: orange;
+       font-weight: 700;
+       box-shadow: 0 4px 0px 0px hsl(290, 70%, 36%);
+     }
 
     .equals-button {
-      background-color: cyan;
+      background-color:  hsl(176, 100%, 44%);
       color: white;
+      box-shadow: 0px 4px 0px 0px hsl(177, 92%, 70%)
     }
+
   }
 }
+
+
+
